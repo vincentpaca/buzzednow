@@ -1,0 +1,476 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote
+  &:before, &:after
+    content: ''
+    content: none
+
+q
+  &:before, &:after
+    content: ''
+    content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+.group
+  &:before
+    content: ""
+    display: table
+  &:after
+    content: ""
+    display: table
+    clear: both
+  zoom: 1
+  /* For IE 6/7 (trigger hasLayout)
+
+h1
+  font-size: 36px
+  line-height: 1.6em
+
+h2
+  font-size: 28px
+
+h3
+  font-size: 20px
+
+small
+  font-size: 11px
+
+a
+  cursor: pointer
+  text-decoration: none
+  color: #1e97dc
+  &:hover
+    text-decoration: underline
+
+input
+  &[type=checkbox]
+    position: relative
+    cursor: pointer
+    top: 1px
+  &:focus
+    outline: none
+
+/* =============================
+/* ! Layout for desktop version
+
+textarea:focus
+  outline: none
+
+input
+  &[type=text], &[type=password]
+    box-sizing: border-box
+    -moz-box-sizing: border-box
+    padding: 5px
+    font-family: Arial, sans-serif
+    margin: 0
+    border: 1px solid #c1c1c1
+
+textarea
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  padding: 5px
+  font-family: Arial, sans-serif
+  margin: 0
+  border: 1px solid #c1c1c1
+
+input
+  &[type=text]:focus, &[type=password]:focus
+    border: 1px solid #b1b1b1
+    box-shadow: 0 2px 2px #e9e9e9 inset
+
+textarea:focus
+  border: 1px solid #b1b1b1
+  box-shadow: 0 2px 2px #e9e9e9 inset
+
+.btn, a.btn, input.btn
+  text-decoration: none
+
+.btn
+  margin: 0
+  cursor: pointer
+  background: #999
+  color: #fff
+  padding: 6px
+  border: none
+  font-size: 11px
+  font-weight: bold
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2)
+  position: relative
+  top: -1px
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  &:active
+    top: 0
+  &.search
+    background: #f36c4d
+  &.buy
+    background: #f36c4d
+    font-size: 18px
+    width: 100%
+    display: block
+    padding: 12px
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15)
+    background: #1fa2d8
+    border-radius: 3px
+
+a.buy
+  width: 100%
+  text-align: center
+
+.btn.buy:hover
+  background: #0f94cb
+
+a.facebook-btn
+  display: inline-block
+  padding: 2px 10px 2px 2px
+  border-radius: 2px
+  color: #fff
+  font-weight: bold
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.35)
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset
+  border: 1px solid #314f8c
+  font-size: 11px
+  background: #6580b3
+  background: -webkit-gradient(linear, left top, left bottom, from(#6580b3), to(#3d5c9e))
+  background: -moz-linear-gradient(top, #6580b3, #3d5c9e)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6580b3', endColorstr='#3d5c9e')
+  margin-right: 10px
+  line-height: 1.6
+  text-decoration: none
+  height: 21px
+
+body
+  font-family: Arial, sans-serif
+  font-size: 100%
+  line-height: 1.6em
+  color: #333
+
+.main-content
+  margin: 20px 0
+
+a.logo
+  background: image-url("logo.png") no-repeat
+  width: 170px
+  height: 36px
+  display: block
+
+.header
+  background: #45c5e0
+  padding: 10px 0
+
+.search
+  &.right
+    float: right
+  input[type=text]
+    border: none
+    -webkit-transition: all .2s ease-in-out
+    -moz-transition: all .2s ease-in-out
+    transition: all .2s ease-in-out
+    width: 180px
+    opacity: .9
+    &:focus
+      width: 230px
+      opacity: 1
+  margin: 3px 0 2px 0
+  display: inline-block
+
+nav
+  &.top-nav
+    > ul
+      display: inline-block
+    input[type=text]
+      border: none
+    > ul > li
+      display: inline-block
+      margin-right: 25px
+      &:first-child
+        margin-left: 0
+    margin-top: 4px
+    a
+      color: #fff
+      font-size: 12px
+      display: block
+      padding: 0px 10px
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2)
+      text-decoration: none
+      /*   	-webkit-transition: all .2s ease-in-out;
+       *     -moz-transition: all .2s ease-in-out;
+       *     -o-transition: all .2s ease-in-out;
+       *     transition: all .2s ease-in-out;
+    > ul > li.onhover
+      background: rgba(0, 0, 0, 0.85)
+      color: #fff
+  &.sub-nav
+    position: absolute
+    z-index: 999
+    background: rgba(0, 0, 0, 0.85)
+    min-width: 135px
+    display: none
+    a:hover
+      color: #1fa6df
+
+header.item-head
+  font-family: 'Bitter', serif
+  h1
+    line-height: 1.4em
+  .price
+    color: #f5584c
+    font-size: 20px
+    font-family: 'Bitter', serif
+
+.price
+  color: #f5584c
+  font-size: 20px
+  font-family: 'Bitter', serif
+
+.block
+  margin: 20px 0
+  &.small
+    font-size: 12px
+
+ul.courier-list
+  margin: 5px 0
+  > li
+    display: inline-block
+    vertical-align: middle
+
+.note
+  background: #eee
+  padding: 10px
+  font-size: 13px
+  margin: 10px 0
+  position: relative
+  text-shadow: 0 1px 0 #fff
+  h3
+    font-size: 16px
+    font-weight: bold
+  .btn
+    margin-left: 10px
+    background: #86c1c5
+
+.item
+  width: 100%
+  margin-bottom: 20px
+
+.product-list
+  font-size: 13px
+
+.new-arrivals .item-img-container
+  height: 350px
+
+.popular-picks .item-img-container
+  height: 300px
+
+.item-img-container
+  display: block
+  height: 250px
+  overflow: hidden
+
+.item-list
+  h1
+    font-size: 49px
+    letter-spacing: -2px
+    line-height: 1em
+    font-weight: normal
+    text-transform: uppercase
+    margin: 20px 0
+  h2
+    font-size: 49px
+    letter-spacing: -2px
+    line-height: 1em
+    font-weight: normal
+    text-transform: uppercase
+    margin: 20px 0
+    font-size: 39px
+
+a.item-small
+  text-decoration: none
+  font-size: 12px
+  display: inline-block
+  margin-bottom: 10px
+
+.item-small
+  .thumbnail-small
+    width: 72px
+    height: 72px
+    overflow: hidden
+    display: inline-block
+  .item-details
+    display: inline-block
+    vertical-align: top
+    margin-left: 10px
+    width: 205px
+    line-height: 1.6
+
+.other-items h3
+  font-size: 14px
+  font-weight: bold
+  margin-bottom: 10px
+
+.modal
+  position: absolute
+  top: 10%
+  left: 50%
+  z-index: 1050
+  font-size: 12px
+  width: 560px
+  margin-left: -280px
+  background-color: white
+  border: 1px solid #999
+  border: 1px solid rgba(0, 0, 0, 0.3)
+  outline: none
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3)
+  -webkit-background-clip: padding-box
+  -moz-background-clip: padding-box
+  background-clip: padding-box
+  &.full
+    width: 840px
+    left: 39.5%
+
+.hide
+  display: none
+
+.modal-backdrop
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 1040
+  background-color: black
+  opacity: .6
+  filter: alpha(opacity = 60)
+  z-index: 1040
+
+.modal-head, .modal-body
+  padding: 10px
+
+.modal-head
+  border-bottom: 1px solid #e1e1e1
+  background: #f4f4f4
+  text-shadow: 0 1px 0 #fff
+  h2
+    font-size: 16px
+    font-weight: bold
+
+.modal-section-1
+  &.left
+    float: left
+  &.right
+    float: right
+  width: 380px
+  float: left
+
+.modal-section-2
+  width: 425px
+  float: right
+
+button.close
+  padding: 0
+  cursor: pointer
+  background: transparent
+  border: 0
+  -webkit-appearance: none
+
+.close
+  float: right
+  font-size: 22px
+  font-weight: bold
+  line-height: 20px
+  color: black
+  text-shadow: 0 1px 0 white
+  opacity: 0.2
+  filter: alpha(opacity = 20)
+  &:hover
+    opacity: .5
+    filter: alpha(opacity = 50)
+
+.form
+  .field-container
+    display: inline-block
+  fieldset
+    margin: 15px 0
+
+.modal
+  .field-container
+    input[type=text]
+      resize: none
+      width: 350px
+      padding: 8px
+      font-size: 14px
+    textarea
+      resize: none
+      width: 350px
+      padding: 8px
+      font-size: 14px
+      height: 80px
+  .form
+    label
+      min-width: 185px
+      display: inline-block
+      vertical-align: top
+      margin-top: 5px
+    input[type=submit]
+      width: 100%
+      padding: 10px
+
+.reservation-agreement
+  font-size: 12px
+  input[type=checkbox]
+    top: 2px
+
+.header-support
+  background: #676767
+  font-size: 12px
+  color: #fff
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2)
+
+.contactnum-top
+  display: inline-block
+  margin-top: 5px
+
+.message
+  margin: 5px 0
+  font-size: 12px
+  &.error
+    color: #ed3f3f
+
+/* =============================
+/* ! Layout for mobile version
+/* =============================
+
+@media handheld, only screen and (max-width: 767px)
+  body!
+
+/* ==========================================
+/* ! Provide higher res assets for iPhone 4
+/* ==========================================
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2)
+  /*	.logo {
+   *		background: url(logo2x.jpg) no-repeat;
+   *		background-size: 212px 303px;
+   *	}
