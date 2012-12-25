@@ -5,6 +5,8 @@ gem 'pg'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'cloudinary'
+gem 'activeadmin'
+gem 'meta_search', '>= 1.1.0.pre'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
