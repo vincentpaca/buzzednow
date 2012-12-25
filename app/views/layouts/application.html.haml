@@ -8,4 +8,10 @@
     = csrf_meta_tags
 
   %body
+    .header
+      = render "shared/header"
+    
+    .header-support
+      = render "shared/header_support"
+
     = yield
