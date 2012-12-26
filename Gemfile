@@ -4,13 +4,13 @@ gem 'rails', '3.2.9'
 gem 'pg'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'carrierwave'
 gem 'cloudinary'
 gem 'activeadmin'
 gem 'meta_search', '>= 1.1.0.pre'
 gem 'sidekiq'
 gem 'slim'
 gem 'sinatra', :require => nil
-gem 'carrierwave'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
