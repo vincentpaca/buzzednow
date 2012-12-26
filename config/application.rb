@@ -64,5 +64,8 @@ module Buzzednow
 
     # Fonts
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
+    # Compile ActiveAdmin assets
+    config.assets.precompile += %w( active_admin.css active_admin.js )
   end
 end
