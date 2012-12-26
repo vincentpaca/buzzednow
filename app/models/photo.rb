@@ -4,4 +4,5 @@ class Photo < ActiveRecord::Base
   belongs_to :item
 
   mount_uploader :public, PhotoUploader
+  process_in_background :public
 end
