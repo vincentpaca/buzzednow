@@ -1,1 +1,35 @@
-HOME
+%section.main-content.item-list
+  .container_12
+    %h1 New Arrivals
+
+    %section.new-arrivals
+      - @new_arrivals.each do |i|
+        .grid_4
+          .item
+            .item-img-container
+              %a{ :href => "#" }
+                = image_tag(i.primary_photo.public)
+
+            %a{ :href => "#" }
+              = i.name
+
+            .price
+              = number_to_currency i.price, :unit => "Php"
+
+%section.main-content.item-list
+  .container_12
+    %h1 Popular Picks
+
+    %section.product-list
+      - @popular_picks.each do |i|
+        .grid_3
+          .item
+            .item-img-container
+              %a{ :href => "#" }
+                = image_tag(i.primary_photo.public)
+
+            %a{ :href => "#" }
+              = i.name
+
+            .price
+              = number_to_currency i.price, :unit => "Php"
