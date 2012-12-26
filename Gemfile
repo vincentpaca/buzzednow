@@ -9,6 +9,7 @@ gem 'cloudinary'
 gem 'activeadmin'
 gem 'meta_search', '>= 1.1.0.pre'
 gem 'sidekiq'
+gem 'carrierwave_backgrounder'
 gem 'slim'
 gem 'sinatra', :require => nil
 
