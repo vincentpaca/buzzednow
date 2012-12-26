@@ -4,7 +4,7 @@ require 'rails/all'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
+  Bundler.require(*Rails.groups(:assets => %w(development test assets)))
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
@@ -66,6 +66,6 @@ module Buzzednow
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 
     # Compile ActiveAdmin assets
-    config.assets.precompile += %w( active_admin.css active_admin.js )
+    config.assets.precompile += %w( active_admin.css active_admin/print.css active_admin.js )
   end
 end
