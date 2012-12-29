@@ -1,0 +1,13 @@
+%header.item-head
+  %h1= @item.name
+  %div.price= number_to_currency @item.price, :unit => "Php"
+
+.block.small
+  %strong=t 'shipping_fee'
+  shipping fee outside Cebu City.
+
+  %ul.courier-list
+    %li= image_tag("logo_lbc.png")
+    %li= image_tag("logo_2go.png")
+    %li= image_tag("logo_air21.png")
+

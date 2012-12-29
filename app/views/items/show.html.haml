@@ -1,0 +1,29 @@
+%section.main-content
+  .container_12
+
+    .grid_7.alpha
+      %section.slider
+        .flexslider
+          %ul.slides
+            - @images.each do |image|
+              %li{ "data-thumb" => image_path(image.public) }
+                = image_tag(image.public)
+
+    .grid_5.omega
+      = render 'shipping'
+
+      .block
+        %a.btn.buy#reserveTrigger=t 'reserve'
+
+      .block
+        .note
+          %h3=t 'pickup'
+          %p
+            =t 'pickup_text'
+            %a.btn#locationTrigger{ :href => "#" }=t 'pickup_where?'
+
+        .note
+          %h3=t 'questions'
+          %p
+            =t 'questions_text_html'
+            %a.btn#contactTrigger{ :href => "#" }=t 'contact_how?'

@@ -1,6 +1,8 @@
 Buzzednow::Application.routes.draw do
   ActiveAdmin.routes(self)
 
+  resources :items
+
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   require 'sidekiq/web'
