@@ -2,6 +2,7 @@ class Item < ActiveRecord::Base
   attr_accessible :name, :price
 
   has_many :photos
+  has_many :reservations
 
   def primary_photo
     self.photos.first
