@@ -12,6 +12,7 @@ gem 'sidekiq'
 gem 'carrierwave_backgrounder'
 gem 'slim'
 gem 'sinatra', :require => nil
+gem 'omniauth'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
