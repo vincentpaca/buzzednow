@@ -13,7 +13,10 @@
       = render 'shipping'
 
       .block
-        %a.btn.buy#reserveTrigger=t 'reserve'
+        - if current_user
+          %a.btn.buy#reserveTrigger=t 'reserve'
+        - else
+          = link_to t('login_to_reserve'), "/auth/facebook?origin=#{item_path(@item)}", :class => "btn buy"
 
       .block
         .note
