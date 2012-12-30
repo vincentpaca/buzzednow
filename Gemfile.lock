@@ -133,6 +133,7 @@ GEM
     mime-types (1.19)
     multi_json (1.5.0)
     multipart-post (1.1.5)
+    newrelic_rpm (3.4.1)
     nokogiri (1.5.5)
     oauth2 (0.8.0)
       faraday (~> 0.8)
@@ -264,6 +265,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   meta_search (>= 1.1.0.pre)
+  newrelic_rpm
   omniauth-facebook
   pg
   rails (= 3.2.9)
