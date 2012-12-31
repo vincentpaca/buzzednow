@@ -1,20 +1,21 @@
-%section.main-content.item-list
-  .container_12
-    %h1 New Arrivals
+- if @new_arrivals.any?
+  %section.main-content.item-list
+    .container_12
+      %h1 New Arrivals
 
-    %section.new-arrivals
-      - @new_arrivals.each do |i|
-        .grid_4
-          .item
-            .item-img-container
-              %a{ :href => item_path(i) }
-                = image_tag(i.primary_photo.public)
+      %section.new-arrivals
+        - @new_arrivals.each do |i|
+          .grid_4
+            .item
+              .item-img-container
+                %a{ :href => item_path(i) }
+                  = image_tag(i.primary_photo.public)
 
-            %a{ :href => "#" }
-              = i.name
+              %a{ :href => "#" }
+                = i.name
 
-            .price
-              = number_to_currency i.price, :unit => "Php"
+              .price
+                = number_to_currency i.price, :unit => "Php"
 
 %section.main-content.item-list
   .container_12
