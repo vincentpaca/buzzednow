@@ -1,10 +1,7 @@
 namespace :cloudinary do
   # add the non-image files that you need to host in Cloudinary
-  js = [ 'application.js' ]
-  css = [ 'application.css' ]
-
   statics = [ 'application.js', 'application.css' ]
-
+  
   task :sync_assets => :environment do
     # precompile assets so that we have minified js
     `bundle exec rake assets:precompile`
@@ -17,5 +14,4 @@ namespace :cloudinary do
     # delete the precompile directory after uploading
     `rm -rf public/assets`
   end
-
 end
