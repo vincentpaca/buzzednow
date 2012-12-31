@@ -118,6 +118,8 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.7.4)
+    ledermann-rails-settings (1.2.0)
+      activerecord (>= 2.3)
     libv8 (3.3.10.4)
     libwebsocket (0.1.6.1)
       websocket
@@ -265,6 +267,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   haml-rails
   jquery-rails
+  ledermann-rails-settings
   meta_search (>= 1.1.0.pre)
   modernizr-rails
   newrelic_rpm
