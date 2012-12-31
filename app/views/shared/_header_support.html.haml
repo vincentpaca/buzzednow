@@ -11,6 +11,6 @@
     %span.contactnum-top=t 'header_support_html'
 
     .search.right
-      %form
-        %input{ :type => "text", :placeholder => "Search", :class => "search-input" }
+      %form{ :action => "/items/?" }
+        %input{ :type => "text", :placeholder => "Search for an item", :class => "search-input", :name => "q" }
         %input{ :type => "submit", :value => "Go", :class => "btn search" }
