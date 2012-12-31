@@ -6,6 +6,10 @@ class ItemsController < ApplicationController
       @items = @items.where("sub_category_id = ?", params[:sub_category])
     end
 
+    if params[:category]
+      @items = Category.find(params[:category]).items
+    end
+
     if params[:q]
       @items = @items.where("name ilike ?", "%#{params[:q]}%")
     end
