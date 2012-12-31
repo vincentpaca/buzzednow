@@ -4,6 +4,8 @@ Buzzednow::Application.routes.draw do
   match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
 
+  get "/privacy", :controller => :home, :action => :privacy
+
   resources :items
 
   devise_for :admin_users, ActiveAdmin::Devise.config
