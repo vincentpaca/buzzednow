@@ -4,6 +4,8 @@ class Item < ActiveRecord::Base
   has_many :photos
   has_many :reservations
 
+  belongs_to :category
+
   def primary_photo
     self.photos.first
   end
