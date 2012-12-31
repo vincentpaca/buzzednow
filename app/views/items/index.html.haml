@@ -1,0 +1,17 @@
+%section.main-content.item-list
+  .container_12
+    %h1 All Items
+
+    %section.product-list
+      - @items.each do |i|
+        .grid_3
+          .item
+            .item-img-container
+              %a{ :href => item_path(i) }
+                = image_tag(i.primary_photo.public, :width => 220)
+
+            %a{ :href => "#" }
+              = i.name
+
+            .price
+              = number_to_currency i.price, :unit => "Php"
