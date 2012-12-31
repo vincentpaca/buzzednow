@@ -5,15 +5,15 @@
 
     
     - if Rails.env.development? || Rails.env.test?
-      = javascript_include_tag "application"
       = stylesheet_link_tag    "application", :media => "all"
+      = javascript_include_tag "application"
     - else
       - Settings.static_assets.each do |a|
+        - if a["url"].include? "css"
+          = stylesheet_link_tag a["url"], :medial => "all"
         - if a["url"].include? "js"
           = javascript_include_tag a["url"]
-        - elsif a["url"].include? "css"
-          = stylesheet_link_tag a["url"], :medial => "all"
-
+    
     = csrf_meta_tags
 
   %body
