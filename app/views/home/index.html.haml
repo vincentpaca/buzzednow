@@ -9,7 +9,7 @@
             .item
               .item-img-container
                 %a{ :href => item_path(i) }
-                  = image_tag(i.primary_photo.public)
+                  = image_tag(i.primary_photo.public, :width => 300)
 
               %a{ :href => "#" }
                 = i.name
@@ -27,7 +27,7 @@
           .item
             .item-img-container
               %a{ :href => item_path(i) }
-                = image_tag(i.primary_photo.public)
+                = image_tag(i.primary_photo.public, :width => 220)
 
             %a{ :href => "#" }
               = i.name
