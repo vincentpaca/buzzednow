@@ -9,3 +9,10 @@ en:
   pickup_where?: Where to pickup?
   contact_how?: Email us
   facebook_login: Login with Facebook
+
+  footer:
+    title: The Wearhouse
+    tagline: Cebu-based E-commerce
+    info: Customer Service
+    news: Newsletter
+    news_text: Signup for upcoming sales and promos.
