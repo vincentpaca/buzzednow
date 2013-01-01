@@ -1,16 +1,4 @@
 .container_12
   .grid_12.alpha
-    - if current_user
-      = "Hey there, #{current_user.first_name}"
-      = link_to "Sign out", signout_path
-    - else
-      %a.facebook-btn{ :href => "/auth/facebook" }
-        %i.icon-facebook-squared{ :style => "font-size:18px; line-height: 0; position: relative; top:1px;" }
-        =t 'facebook_login'
-
-    %span.contactnum-top=t 'header_support_html'
-
-    .search.right
-      %form{ :action => "/items/?" }
-        %input{ :type => "text", :placeholder => "Search for an item", :class => "search-input", :name => "q" }
-        %input{ :type => "submit", :value => "Go", :class => "btn search" }
+    %nav.top-nav
+      = render "shared/navigation"

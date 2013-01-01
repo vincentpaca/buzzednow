@@ -3,18 +3,9 @@
     = link_to  "", root_url, :class => "logo"
 
   .grid_9.omega
-    %nav.top-nav
-      %ul
-        - categories.each do |c|
-          %li{ :class => "" }
-            = link_to "/items/?category=#{c.id}" do
-              = c.name
-              - if c.sub_categories.any?
-                %i.icon-down-open
-            
-            - if c.sub_categories.any?
-              %nav.sub-nav{ :style => "display:none;" }
-                %ul
-                  - c.sub_categories.each do |s|
-                    %li= link_to s.name, "/items/?sub_category=#{s.id}"
-
+    .header-nav
+      .search
+        = render "shared/search"
+      
+      = render "shared/account"
+                

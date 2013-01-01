@@ -1,0 +1,13 @@
+%ul
+  - categories.each do |c|
+    %li
+      = link_to "/items/?category=#{c.id}" do
+        = c.name
+        - if c.sub_categories.any?
+          %i.icon-down-open
+      
+      - if c.sub_categories.any?
+        %nav.sub-nav
+          %ul
+            - c.sub_categories.each do |s|
+              %li= link_to s.name, "/items/?sub_category=#{s.id}"

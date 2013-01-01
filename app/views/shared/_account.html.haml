@@ -1,0 +1,19 @@
+.facebook-account-wrapper
+  - if current_user
+    %a.facebook-user-loggedin
+      .facebook-user-img
+        = image_tag(current_user.image_url, :width => 35, :height => 35)
+      %span.facebook-user-name
+        = current_user.name
+        %i.icon-down-open
+
+    %nav.fb-sub-nav{ :style => "display: none;" }
+      %span.tooltip-tail.top
+      %ul
+        %li= link_to "Logout", signout_path
+  - else
+    %a.facebook-btn{ :href => "/auth/facebook" }
+      %i.icon-facebook-squared{ :style => "font-size:18px; line-height: 0; position: relative; top:1px;" }
+      =t 'facebook_login'
+
+
