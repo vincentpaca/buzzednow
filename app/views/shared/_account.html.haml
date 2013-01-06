@@ -10,9 +10,9 @@
     %nav.fb-sub-nav{ :style => "display: none;" }
       %span.tooltip-tail.top
       %ul
-        %li= link_to "Logout", signout_path
+        %li= link_to "Logout", signout_path, :html => { "data-no-turbolink" => "" }
   - else
-    %a.facebook-btn{ :href => "/auth/facebook" }
+    %a.facebook-btn{ :href => "/auth/facebook", "data-no-turbolink" => "" }
       %i.icon-facebook-squared{ :style => "font-size:18px; line-height: 0; position: relative; top:1px;" }
       =t 'facebook_login'
 
