@@ -5,6 +5,8 @@ Buzzednow::Application.routes.draw do
   match "/signout" => "sessions#destroy", :as => :signout
 
   get "/privacy", :controller => :home, :action => :privacy
+  get "/terms", :controller => :home, :action => :terms
+  get "/contact", :controller => :home, :action => :contact
 
   resources :items
 
