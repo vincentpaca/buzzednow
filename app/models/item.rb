@@ -12,7 +12,7 @@ class Item < ActiveRecord::Base
 
   class << self
     def new_arrivals
-      Item.where("created_at > ?", 3.days.ago).limit(3)
+      Item.where("created_at > ?", 3.days.ago).order("CREATED_AT DESC").limit(3)
     end
 
     def popular_picks
