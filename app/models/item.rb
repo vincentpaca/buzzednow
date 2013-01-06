@@ -16,7 +16,7 @@ class Item < ActiveRecord::Base
     end
 
     def popular_picks
-      Item.where("created_at < ?", 3.days.ago).limit(8)
+      Item.where("created_at < ?", 3.days.ago).limit(12).order("RANDOM()")
     end
   end
 end
