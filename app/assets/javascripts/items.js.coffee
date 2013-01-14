@@ -1,4 +1,4 @@
-$(window).load ->
+ready = ->
   $(".flexslider").flexslider
     animation: "slide"
     controlNav: "thumbnails"
@@ -20,3 +20,6 @@ $(window).load ->
   $(".close,.modal-backdrop").click ->
     $(".modal").addClass "hide"
     $(".modal-backdrop").addClass "hide"
+
+$(document).ready(ready)
+$(document).on('page:load', ready)
