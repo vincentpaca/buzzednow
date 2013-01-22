@@ -2,6 +2,21 @@
   %h1= @item.name
   %div.price= number_to_currency @item.price, :unit => "Php"
 
+%ul.block.item-extra-info
+	%li
+		%h3 Available Sizes
+		.size-swatch
+			%label.size-extra-small
+				%span XS
+			%label.size-medium
+				%span S
+			%label.size-large
+				%span L
+			%label.size-xlarge.inactive
+				%span XL
+			%label.size-xxlarge.inactive
+				%span 2XL
+			
 .block.small
   %strong=t 'shipping_fee'
   shipping fee outside Cebu City.
