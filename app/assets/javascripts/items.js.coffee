@@ -21,5 +21,16 @@ ready = ->
     $(".modal").addClass "hide"
     $(".modal-backdrop").addClass "hide"
 
+  $(".vote-list a").click ->
+    $(this).toggleClass "active"
+
+  $(".size-swatch > label").click ->
+    $(".size-swatch > label").removeClass "active"
+    $(this).addClass "active"
+    $(".size-swatch > label.inactive").removeClass "active"
+
 $(document).ready(ready)
 $(document).on('page:load', ready)
+
+
+

@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Bitter:400,700)
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
   margin: 0
   padding: 0
@@ -221,6 +223,15 @@ a
     margin-top: 5px
   &.facebook-user-loggedin! .icon-down-open
 
+i
+  &.icon-thumbs-up
+    width: 16px
+    height: 16px
+    display: block
+    background-image: url('thumbs.png')
+    background-repeat: no-repeat
+    background-position: 0 0
+
 .facebook-user-name
   font-size: 11px
   margin: 5px 0 0 0
@@ -251,7 +262,6 @@ nav.top-nav
     margin-right: 25px
     &:first-child
       margin-left: 0
-  margin: 4px 0
   a
     color: #fff
     font-size: 12px
@@ -259,10 +269,6 @@ nav.top-nav
     padding: 0px 10px
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2)
     text-decoration: none
-    /*   	-webkit-transition: all .2s ease-in-out;
-     *     -moz-transition: all .2s ease-in-out;
-     *     -o-transition: all .2s ease-in-out;
-     *     transition: all .2s ease-in-out;
 
 .fb-sub-nav > ul > li > a
   color: #fff
@@ -271,10 +277,6 @@ nav.top-nav
   padding: 0px 10px
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2)
   text-decoration: none
-  /*   	-webkit-transition: all .2s ease-in-out;
-   *     -moz-transition: all .2s ease-in-out;
-   *     -o-transition: all .2s ease-in-out;
-   *     transition: all .2s ease-in-out;
   &:hover
     color: #1E97DC
 
@@ -327,10 +329,18 @@ header.item-head
   font-size: 20px
   font-family: 'Bitter', serif
 
+ul.list
+  li
+    margin: 10px 0 10px 15px
+    list-style-type: circle
+
 .block
   margin: 20px 0
   &.small
     font-size: 12px
+
+.privacy-content
+  font-size: 12px
 
 ul.courier-list
   margin: 5px 0
@@ -405,6 +415,75 @@ a.item-small
     margin-left: 10px
     width: 205px
     line-height: 1.6
+
+.item-extra-info
+  h3
+    font
+      size: 13px
+      weight: bold
+.size-swatch
+  span
+    position: relative
+  >label
+    display: inline-block
+    cursor: pointer
+    position: relative
+    width: 23px
+    height: 23px
+    padding: 10px
+    text-align: center
+    border: 1px solid #e1e1e1
+    border-radius: 50%
+    -webkit-transition: all .1s ease-in-out
+    -moz-transition: all .1s ease-in-out
+    transition: all .1s ease-in-out
+    &:hover
+      border: 1px solid #d1d1d1
+    &.active
+      background: #f1f1f1
+      border: 1px solid #c1c1c1
+      box-shadow: 0 2px 2px rgba(0,0,0,.10) inset
+      text-shadow: 0 1px 0 #fff
+    &.inactive
+      opacity: .4
+      color: #777
+      cursor: default
+      border: 1px solid #e1e1e1
+    &.size-extra-small
+      width: 16px
+      height: 16px
+      padding: 5px
+      top: 2px
+      font-size: 10px
+      > span
+        top: -4px
+    &.size-small
+      width: 19px
+      height: 19px
+      padding: 7px
+      font-size: 13px
+      > span
+        top: -1px
+        left: -1px
+    &.size-medium
+      width: 23px
+      height: 23px
+      padding: 8px
+      font-size: 16px
+      > span
+        top: -1px
+        left: 0px
+    &.size-large
+      width: 25px
+      height: 25px
+      padding: 10px
+      font-size: 20px
+    &.size-xlarge
+      @extend label.size-large
+    &.size-xxlarge
+      @extend .size-large
+      > span
+        left: -5px
 
 .other-items h3
   font-size: 14px
@@ -549,6 +628,63 @@ button.close
     font-weight: bold
     font-family: 'Bitter', serif
 
+.vote-wrapper
+  margin-bottom: 10px
+  font-size: 14px
+  font-weight: bold
+  color: #999
+
+.vote-list
+  display: inline-block
+  > li
+    position: relative
+    display:inline-block
+    text-align: center
+    color: #666
+    font-weight: bold
+    & :first-child
+      margin-right: 5px
+    
+    > a
+      display: inline-block
+      padding: 10px 8px 10px 10px
+      z-index: 999
+      position: relative
+      
+      text-align: center
+      
+      border-radius: 3px
+      background: #f9f9f9
+      color: #454545
+      border: 1px solid #e1e1e1
+      border-bottom: 1px solid #ccc
+      box-shadow: 0 1px 0 #d1d1d1, 0 1px 0 #fff inset
+      &.vote-up
+        &.active
+          background: #1fa2d8
+          border: 1px solid #0f82b2
+          box-shadow: 0 1px 3px rgba(0,0,0,.3) inset
+          i.icon-thumbs-up
+            background-position: 0 -16px
+        &:active
+          box-shadow: 0 1px 3px rgba(0,0,0,.3) inset
+          top: 1px
+          color: #fff
+      &.vote-down
+        &.active
+          background: #ed5151
+          border: 1px solid #d23d3d
+          box-shadow: 0 1px 0 #d23d3d, 0 1px 0 rgba(255,255,255,.25) inset
+        &:active
+          box-shadow: 0 1px 3px rgba(0,0,0,.3) inset
+          top: 1px
+          color: #fff
+  
+  .vote-count
+    vertical-align: top
+    margin-top: 7px  
+    display: inline-block
+
 /* =============================
 /* ! Layout for mobile version
 /* =============================
@@ -561,7 +697,4 @@ button.close
 /* ==========================================
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2)
-  /*	.logo {
-   *		background: url(logo2x.jpg) no-repeat;
-   *		background-size: 212px 303px;
-   *	}
+  
